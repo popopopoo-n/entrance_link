@@ -168,6 +168,8 @@ $(function () {
       autoplay: true,
       autoplaySpeed: 1500,
       slidesToShow: 3,
+      pauseOnHover: false,
+      pauseOnFocus: false,
       responsive: [
         {
           breakpoint: 479, // 479px以下のサイズに適用
@@ -178,6 +180,8 @@ $(function () {
             autoplay: true,
             autoplaySpeed: 1500,
             slidesToShow: 1,
+            pauseOnHover: false,
+            pauseOnFocus: false
           },
         },
       ],
