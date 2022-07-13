@@ -1,0 +1,1309 @@
+@charset "UTF-8";
+
+/*---------------------------------------------------------------
+typo
+-------------------------------------------------------------------*/
+/* html {
+  height: 100%;
+} */
+
+body {
+  background-color: #fffffb;
+  color: #333333;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+  font-feature-settings: "palt";
+  padding: 0;
+  margin: 0;
+}
+
+.wrap_original {
+  overflow: hidden;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:link{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.col {
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------
+utility
+-------------------------------------------------------------- */
+.sp-non {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+
+/*------------------------------------------------------
+.c-heading-primary 各項目見出し線
+----------------------------------------------------------- */
+.heading-primary::before {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 56px;
+  height: 4px;
+  background-color: #cccccc;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  content: "";
+}
+
+/* ----------------------------------------------------------------
+layout ここから
+-------------------------------------------------------------------*/
+
+.element {
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s, visibility 1s, transform 1s;
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* header----------------------------------------------------------- */
+
+.header-logo {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  line-height: 1;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 100;
+}
+
+.header-logo-link {
+  display: block;
+}
+
+/*--------------------------------------------------------------------
+hamburger
+--------------------*/
+.hamburger {
+  position: fixed;
+  z-index: 99999;
+}
+
+/* 井上さん作成部（ハンバーガーメニュー） -----------------------------------
+---------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .header-nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 64px 24px;
+    background-color: #d8d6d5;
+    text-align: center;
+    overflow-y: auto;
+  }
+}
+
+.btn-hamburger {
+  position: fixed;
+  z-index: 10000;
+  top: 6px;
+  left: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 22px 18px;
+  background-color:#d8d6d5;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  color: #d8d6d5;
+}
+
+.btn-hamburger-line {
+  position: relative;
+  top: 8px;
+  width: 24px;
+  height: 2px;
+  background-color:#ffffff;
+}
+
+.btn-hamburger-line::before,
+.btn-hamburger-line::after {
+position: absolute;
+display: block;
+width: 24px;
+height: 2px;
+background-color: #ffffff;
+transition: 0.3s;
+content: "";
+}
+
+.btn-hamburger-line::before {
+  top: -8px;
+}
+
+.btn-hamburger-line::after {
+  bottom: -8px;
+}
+
+.btn-hamburger[aria-expanded=true] .btn-hamburger-line {
+  background: transparent;
+}
+
+.btn-hamburger[aria-expanded=true] .btn-hamburger-line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.btn-hamburger[aria-expanded=true] .btn-hamburger-line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.global-nav-item {
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 18px;
+}
+.global-nav-list {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 479px) {
+  .global-nav-link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.global-nav-link:hover {
+  text-decoration: none;
+}
+
+.global-nav-img-link {
+  justify-content: space-between;
+}
+
+.hamburger-in-logo {
+  margin-right: 95px;
+}
+
+.header-sns-logo {
+  display: block;
+  text-align: left;
+} 
+
+/*---------------------------------------------------------
+big-bg ho-gan  方眼背景
+-------------------------------------------------------------------*/
+.bg_pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  background-color: #fffffb;
+  z-index: -1;
+}
+
+.Paper_v2 {
+  background-image:
+    repeating-linear-gradient(to bottom,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+
+    repeating-linear-gradient(to right,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
+}
+
+/* --------------------------------------------------------------------
+  main
+------------------------------------------------------------------------*/
+.main-copy {
+  margin: 0 auto;
+  margin: 160px 0 30px 0;
+}
+
+.main-copy-title {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.main-copy-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* mv イラストアニメーション --------------------------------------------*/
+
+.mv {
+  border-radius: 35px;
+  height: 570px;
+  width: 335px;
+  margin: 0 auto;
+}
+
+.mv-slide {
+  position: relative;
+  top: 35px;
+  width:  80%; /* 画像の横幅に合わせて記述 */
+  height: 80%; /* 画像の高さに合わせて記述 */
+  margin: 0 auto;
+}
+
+.mv-image {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 8;
+  opacity: 0.0;
+}
+
+.active {
+  z-index: 10;
+  opacity: 1.0;
+}
+
+.last-active {
+   z-index: 9;
+}
+
+
+.mv-animation {
+  animation: bgchange 18s ease infinite;
+}
+
+@keyframes bgchange{
+  0%   {background:#fad26a;}/*変化させたい色*/
+  25%  {background:#95859c;}/*変化させたい色*/
+  50%  {background:#f7b977;}/*変化させたい色*/
+  75%  {background:#cc6f58;}/*変化させたい色*/
+  90%  {background:#2ebea5;}/*変化させたい色*/
+  100%   {background:#fad26a;}/*変化させたい色*/
+}
+
+/* 320px mv幅調整 ------------------------------ */
+
+@media screen and (max-width:320px) {
+  .mv {
+    height: 530px;
+    width: 305px;
+  }
+}
+
+/* --------------------------------------------------------------------
+  about
+----------------------------------------------------------------------- */
+
+
+/* 波アニメーション --------------------------------------------------- */
+.wave{
+  position:relative;
+  height:700px;
+  background:#f6fbf6;/*背景を塗りつぶして重ねた波を表現したい場合は、波を描画する親要素に波と同じ背景色を設定しましょう。*/
+}
+
+canvas{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  z-index: 1;
+}
+
+#waveCanvas {
+  position: absolute;
+  top: -140px;
+}
+
+#waveCanvas2 {
+  position: absolute;
+  top: 500px;
+}   
+/*波アニメーション終 */
+
+.about {
+  margin-top: 150px;
+}
+
+.about-item01-text {
+  text-align: left;
+  margin: 0 30px;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+/* サンプルスライド-------------------------------------------- */
+.about-item01-sample {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  top: 20px;
+  z-index: 10;
+}
+
+.sample-item img {
+  display: block;
+  border-radius: 15px;
+  max-height: 610px;
+}
+
+.sample-item {
+  margin: 0 1em;
+}
+
+.about-slider {
+  margin: 30px auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.about-slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: relative;
+  top: 4px;
+}
+
+
+/* about2 SP図と吹き出しアニメーション --------------------------------------------*/
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.about-item02 {
+  background-color: #f8f4e6;
+  padding: 50px 0;
+  position: relative;
+  margin-top: 240px;
+
+}
+
+.about-item02 .title {
+  position: relative;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.sp-img {
+  width: 70%;
+  margin-top: 50px;
+  margin: 50px auto;
+  /* min-width: 310px; */
+}
+
+/* 吹き出しアニメーション------------------------------------------------------- */
+.fade {
+  margin: 10px;
+}
+
+.scroll-up01, .scroll-up02, .scroll-up03{
+  opacity: 0;
+}
+
+.scroll-up02 {
+  animation-delay:1s
+}
+
+.scroll-up03 {
+  animation-delay:2s
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration:4s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 200;
+}
+
+@keyframes fadeUpAnime{
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.comment-scroll01, .comment-scroll02, .comment-scroll03 {
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: left;
+  padding: 30px;
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+}
+
+.comment-scroll01 {
+  top: 6em;
+  left: 0.5em;
+}
+
+.comment-scroll02 {
+  top: 20em;
+   right: 0.5em;
+}
+
+.comment-scroll03 {
+  top: 31em;
+  left: 0.5em;
+}
+
+/* -------------------------------------------------------------
+  plan
+---------------------------------------------------*/
+#plan {
+  margin-top: 100px;
+  position: relative;
+  /* top: 200px; */
+}
+
+#plan .title {
+  margin: 30px auto 0;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.plan-tax {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.slider {
+  margin: 30px auto 0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+ 
+.txt-box {
+  margin-bottom: 20px;
+}
+
+.item-icon {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 60px;
+  position: absolute;
+  z-index: 1;
+  top: -46px;
+  left: calc(50% - 22px);
+  width: 44px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.item-title {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 2.5;
+}
+
+.item-title span {
+  position: relative;
+  z-index: 1;
+}
+
+.txt-box, .price-box {
+  position: relative;
+  z-index: 1;
+}
+
+.item-txt {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.price-list ul {
+  padding-left: 0;
+}
+
+.price-title:after {
+  border-top: 2px solid #cccccc;
+  content: "";
+  width: 80%; 
+}
+
+.price-title:after {
+  margin-left: 10px; 
+}
+
+.price-title {
+  color: #cccccc;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  }
+
+.price {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.price-list {
+  border: solid 2px #cccccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.price-list-item {
+  border-bottom: solid 2px #cccccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.price-list-item:last-child {
+  border-bottom: none;
+}
+
+.price-list-item-title {
+  font-size: 15px;
+  text-align: center;
+  padding-top: 4px;
+  margin-left: 15px;
+}
+
+.price-list-item-maru {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  text-align:center;
+  line-height: 20px;
+  border-radius: 50%;
+  border: solid 5px #a3bacd;
+  margin-right: 15px;
+}
+
+.price-list-item-batu {
+  width: 30px;
+  margin-right: 18px;
+  padding: 2px 0;
+}
+
+/* order-made plan --------------------------------------------*/
+.line-blue {
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  border: 8px solid #87afc5;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 22px;
+  min-height: 590px;
+}
+  
+.line-blue:before,
+.line-blue:after {
+  position: absolute;
+  content: '';
+}
+  
+.line-blue:before {
+  top: -40px;
+  left: calc(50% - 48px);
+  width: 80px;
+  height: 90px;
+  border: 8px solid #87afc5;
+  border-radius: 50%;
+  background: #fff;
+}
+  
+.line-blue:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+}
+
+/* semi-order plan  ---------------------------------------------- */
+.line-purple {
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  border: 8px solid #706caa;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 22px;
+  min-height: 590px;
+}
+  
+.line-purple:before,
+.line-purple:after {
+  position: absolute;
+  content: '';
+}
+  
+.line-purple:before {
+  top: -40px;
+  left: calc(50% - 48px);
+  width: 80px;
+  height: 90px;
+  border: 8px solid #706caa;
+  border-radius: 50%;
+  background: #fff;
+}
+  
+.line-purple:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+}
+
+/* template plan  ------------------------------------------------ */
+.line-green {
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  border: 8px solid #77b1a1;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 22px;
+  min-height: 590px;
+}
+  
+.line-green:before,
+.line-green:after {
+  position: absolute;
+  content: '';
+}
+  
+.line-green:before {
+  top: -40px;
+  left: calc(50% - 48px);
+  width: 80px;
+  height: 90px;
+  border: 8px solid #77b1a1;
+  border-radius: 50%;
+  background: #fff;
+}
+  
+.line-green:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px;
+}
+
+/* 各プランの高さ合わせるためのレイアウト調整 -------------*/
+.br-none-sp {
+  display: none;
+}
+
+@media screen and (max-width:320px) {
+  .br-none-sp {
+    display: block;
+  }
+}
+
+/*-------------------------------------
+step
+--------------------------------------*/
+
+/*サイト全体のクラス*/
+#step {
+  padding: 100px 20px 50px 20px;
+  background-color: #f8f4e6;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+#step .title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 28px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.step-area{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.text-area {
+  display: block;
+  position: relative;
+  /* margin-right: 5px; */
+}
+
+.text-box1 {
+  /* width: 75%; */
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 40;
+  left: -10px;
+  top: 5vw;
+}
+
+.text-box2 {
+  /* width: 75%; */
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 40;
+  left: -10px;
+  top: 20vw;
+}
+
+.text-box3 {
+  /* width: 75%; */
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 40;
+  left: -10px;
+  top: 40vw;
+}
+
+/*----- STEP白文字 -----*/
+.step-num01, .step-num02, .step-num03 {
+  color: #fff;
+}
+
+.step-num01 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.step-num02 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.step-num03 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/*----- STEP青い部分 -----*/
+.step-arrow01{
+  writing-mode: vertical-rl;
+  background-color: #698aab;
+  padding:300px 0 0 0;
+  position: relative;
+  top: 0;
+  z-index: 30;
+}
+
+.step-arrow02{
+  writing-mode: vertical-rl;
+  background-color: #698aab;
+  padding:250px 0 0 0;
+  position: relative;
+  top: 0;
+  z-index: 20;
+}
+
+.step-arrow03{
+  writing-mode: vertical-rl;
+  background-color: #698aab;
+  padding:200px 0 0 0;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/*----- 三角 -----*/
+.triangle {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    border-top: 32px solid #698aab;
+    position: relative;
+    z-index: 20;
+}
+
+/*----- 矢印 -----*/
+.step-arrow01::after {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 0 7px;
+  border-bottom: 4px solid #f8f4e6;
+  border-right: 4px solid #f8f4e6;
+  transform: rotate(45deg);
+}
+
+.step-arrow02::after {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 0 7px;
+  border-bottom: 4px solid #f8f4e6;
+  border-right: 4px solid #f8f4e6;
+  transform: rotate(45deg);
+}
+.step-arrow03::after {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 0 7px;
+  border-bottom: 4px solid #698aab;
+  border-right: 4px solid #698aab;
+  transform: rotate(45deg);
+}
+
+/*お問い合わせ表題*/
+.step-txt-title{
+  margin: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+/*お問い合わせ内容*/
+.step-area p {
+  font-size: 16px;
+  margin: 5px 0 15px 0;
+  color: #4d4d4d;
+}
+
+/* lineボタン */
+
+.btn {
+  padding: 5px 30px;
+  border-radius:16px;
+  font-size: 24px;
+  font-weight: 500;
+} 
+
+.btn--color {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  white-space: nowrap;
+  background-color: #3eb370;
+  border-bottom: 5px solid #007b43;
+}
+
+.btn--icon{
+  padding-right: 80px;
+  background-image: url(../images/hukidasi.png);
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  background-size: 30px auto;
+}
+
+img.line_button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+img.line_button:active {
+  position: relative;
+}
+
+
+/* -----------------------------------
+FAQ
+------------------------------------*/
+#faq {
+  position: relative;
+  /* top: -100px; */
+}
+
+#faq .title {
+  position: relative;
+  margin: 30px 0 50px 0;
+  text-align: center;
+}
+
+.faqgroup {
+  background-color: #FFFFFB;
+  padding-bottom: 80px;
+  padding-top: 65px;
+}
+
+/* よくある質問 */
+/*アコーディオン全体*/
+.accordion-area {
+  list-style: none;
+  font-size: 16px;
+  width: 90%;
+  max-width: 900px;
+  margin:0 auto;
+}
+
+.accordion-area li {
+  margin: 15px 0;
+}
+
+.accordion-area section {
+  background-color: #F8F4E6;
+  border: 1px solid #F8F4E6;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.accordion-area .faq-title::before {
+  content:"Q.";
+  position: absolute;
+  top:17%;
+  left: 1.1em;
+  color: #884737;
+  font-size: 1.7em;
+  font-weight: 900;
+  /* transform: translateY(-50%); */
+}
+
+/*アコーディオンタイトル*/
+.faq-title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size:16px;
+  font-weight: normal;
+  padding:24px 16px 24px 75px;
+  transition: all .5s ease;
+}
+
+/*アイコンの上下*/
+.faq-title::after {
+content: "";
+position: absolute;
+right: 25px;
+top: 38%;
+transition: all 0.2s ease-in-out;
+display: block;
+width: 12px;
+height: 12px;
+border-top: solid 3px #884737;
+border-right: solid 3px #884737;
+-webkit-transform: rotate(135deg);
+transform: rotate(135deg);    
+}
+
+/*　closeというクラスがついたら形状変化　*/
+/* .title.close::before{
+transform: rotate(-45deg);
+} */
+
+.faq-title.close::after {
+transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.accordion-area .box::before {
+  content:"A.";
+  position: absolute;
+  top:5%;
+  left: 0.6em;
+  color: #884737;
+  font-size: 1.7em;
+  font-weight: 900;
+}
+
+.box {
+  position: relative;
+  display: none;/*はじめは非表示*/
+  background: #fff;
+  margin:5px 15px 15px;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.box p {
+  font-size: 16px;
+  text-align: left;
+  padding: 16px 16px 16px 50px;
+}
+
+/* 320px用　幅設定 ------------------------------------------------ */
+
+@media screen and (max-width:320px) {
+  #step {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .step-arrow01::after ,
+  .step-arrow02::after,
+  .step-arrow03::after,
+  .step-arrow01,
+  .step-arrow02,
+  .step-arrow03,
+  .step-arrow03,
+  .triangle {
+    left: 8px;
+  }
+
+  .step-num01,
+  .step-num02,
+  .step-num03 {
+    font-size: 28px;
+  }
+
+  .text-box1 {
+    padding: 10px 20px;
+    top: 8vw;
+  }
+
+  .text-box2 {
+    padding: 10px 20px;
+    top: 28vw;
+  }
+
+  .text-box3 {
+    padding: 10px 20px;
+    top: 54vw;
+  }
+
+  .faq-title {
+    font-size: 14px;
+    padding:20px 12px 20px 55px;
+  }
+
+  .faq-title::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .none320 {
+    display: none;
+  }
+
+  .sp-img {
+    width: 80%;
+  }
+  
+}
+
+/*---------------------------------------------------------------
+  footer
+--------------------------------------------------------------*/
+
+
+footer {
+  background-color: #d8d6d5;
+  color:#585858;
+  width: 100%;
+  height: 230px;
+  /*footer位置がずれる場合はpositionを変更*/
+  position: relative;
+  /* top: -120px; */
+}
+
+a {
+  color: #585858;
+  display: block;
+}
+
+.link {
+  font-size: 14px;
+}
+
+.footer-contents {
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /*左右の幅を画面サイズに合わせて変更するように指定*/
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+/*運営会社*/
+.company {
+    padding-top: 30px;
+}
+
+/*プライバシーポリシー*/
+.policy {
+    padding-top: 20px;
+}
+
+/*instagram*/
+.instagram {
+    padding-top: 20px;
+}
+
+.instagram img {
+    width: 36px;
+    height: 36px;
+}
+
+/*サイトトップへ戻る*/
+.site_top {
+    padding-top: 30px;
+    list-style: none;
+    /*linkとの間隔を調整*/
+    margin-left: auto;
+}
+
+.copyright {
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+/* 固定ボタン--------------------------------------------------- */
+.fixed-btn-sp {
+  position: fixed;
+  bottom: 10px;
+  left: 5%;
+  width: 88%;
+  margin: 0 auto;
+  z-index: 10000;
+}
+
+a.fixed-btn01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee7e0;
+  border: 1px solid #9d8e87;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 6% 0 12%;
+  color: #9d8e87;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  position: relative;
+  transition-duration: 0.2s;
+  border-radius: 40px;
+}
+
+a.fixed-btn01:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 8px;
+  border-color: transparent transparent transparent #9d8e87;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  margin-top: -7px;
+}
+
+a.fixed-btn01:hover:before {
+  border-color: transparent transparent transparent #eee7e0;
+}

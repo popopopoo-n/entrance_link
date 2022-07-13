@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/resset.css">
+    <link rel="stylesheet" href="css/contact.css" media="(min-width: 480px)">
+    <link rel="stylesheet" href="css/contact_sp.css" media="(max-width: 479px)">
+</head>
+<body>
+    <header>
+        <div class="page-header">
+            <nav class="g-nav">
+                <ul class="nav-list d-flex">
+                    <li><a href="index.html#about">エントランスLINKとは？</a></li>
+                    <li><a href="index.html#plan">料金プラン</a></li>
+                    <li><a href="index.html#step">制作の流れ</a></li>
+                    <li><a href="index.html#faq">よくある質問</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+             <!-- hamburger -->
+            <div class="hamburger">
+                <button type="button" class="btn-hamburger" aria-controls="gnav" aria-expanded="false">
+                <span class="btn-hamburger-line"></span>
+                </button>
+                <div id="gnav" class="header-nav" aria-hidden="true">
+                    <nav class="global-nav">
+                        <ul class="global-nav-list">
+                            <li class="global-nav-item"><a class="global-nav-link" href="index.html#about">エントランスLINKとは？</a></li>
+                            <li class="global-nav-item"><a class="global-nav-link" href="index.html#plan">料金プラン</a></li>
+                            <li class="global-nav-item"><a class="global-nav-link" href="index.html#step">制作の流れ</a></li>
+                            <li class="global-nav-item"><a class="global-nav-link" href="index.html#faq">よくある質問</a></li>
+                            <li class="global-nav-item"><a class="global-nav-link" href="#">お問い合わせ</a></li>
+                        </ul>
+                        <ul class="global-nav-list d-flex global-nav-img-link">
+                            <li class="global-nav-item"><a class="global-nav-link" href="https://www.instagram.com/">
+                                <img src="images/insta_logo.png" alt="インスタロゴ" class="header-sns-logo" height="50">
+                            </a></li>
+                            <li class="global-nav-item"><a class="global-nav-link" href="index.html">
+                                <img src="images/logo.png" alt="エントランスリンクのロゴ" height="50" class="hamburger-in-logo">
+                            </a></li>
+                        </ul><!-- /.global-nav-list -->
+                    </nav><!-- /.global-nav -->
+                </div>
+            </div> 
+        </div>
+    </header><!-- /header -->
+    <main>
+        <div class="ttl">
+            <div class="top-logo d-flex">
+                <a href="index.html">
+                    <img src="images/logo.png" height="50" alt="エントランスリンクロゴ">
+                </a>
+            </div>
+            <div class="wave">
+                <canvas id="waveCanvas"></canvas>
+            </div>
+            <div class="main-ttl container">
+                <h1 class="contact-ttl">お問い合わせ</h1>
+                <p class="contact-txt">LINEまたはフォームにてお問い合わせください。</p>
+            </div>
+        </div>
+        <div class="contact-section">
+            <div class="line container">
+                <div class="line-logo">
+                    <img src="images/LINE_logo.png" alt="LINEのロゴ" class="logo_pc">
+                    <img src="images/LINE_logo2.png" alt="LINEのロゴ" class="logo_sp">
+                </div>
+                 <div class="line-txt">
+                    <h1>LINEでお問い合わせ</h1>
+                    <p>エントランスLINK公式LINEをお友だち追加していただくと、LINEにてお問い合わせいただけます。</p>
+                </div>
+                <div class="btn d-flex">
+                    <button onclick="location.href='https:\/\/line.me/R/ti/p/@753wlvex'" class="line-btn">お友だち追加する</button>
+                </div>
+            </div>
+            <div class="form container">
+                <div class="form-logo">
+                    <img src="images/form_logo.png" alt="Googleformのロゴ">
+                </div>
+                <div class="form-txt">
+                    <h1>フォームでお問い合わせ</h1>
+                    <p>下記フォームリンクからでもお問い合わせいただけます。必要事項を入力し、送信してください。</p>
+                </div>
+                <div class="btn d-flex">
+                    <button  onclick=location.href='https:\/\/www.google.com/intl/ja_jp/forms/about/' class="form-btn">フォームで問い合わせる</button>
+                </div>
+            </div>
+        </div>
+    </main><!-- /main -->
+    <!-- 堀さん作成 -->
+    <footer>
+        <div class="container">
+            <div class="d-flex footer-contents">
+                <ul class="link">
+                    <!--運営会社-->
+                    <li class="company"><a href="https://kuru.design/">運営会社</a></li>
+                    <!--プライバシーポリシー-->
+                    <li class="policy"><a href="https://kuru.design/privacypolicy/">プライバシーポリシー</a></li>
+                    <!--Instagram-->
+                    <li class="instagram"><a href="https://www.instagram.com/">
+                        <img src="images/insta_logo.png" alt="insta_icon_SP"></a></li>
+                </ul>
+                <ul class="site_top">
+                    <!--サイトトップへ戻る-->
+                    <li><a href="#"><img src="images/logo.png" height="40"></a></li>
+                </ul>
+            </div>
+            <!--コピーライト-->
+        </div>
+        <p class="copyright">&copy;entranceLINK</p>
+    </footer><!-- /footer -->
+
+<!-- aタグを囲んでたpタグを消しました -->
+<!-- スペルミス（copylightからcopyright）に変更しました -->
+<!-- footerのクラスのwwrapperを消してクラス名”container”を与えたdivで要素を囲みました -->
+<!-- エントランスリンクのロゴの大きさをhtmlで指定しています。 -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

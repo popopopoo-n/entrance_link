@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Entrance Link</title>
+
+    <!-- SEO -->
+    <meta name="discription" content="エントランスLINKのホームページ">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- web font -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/resset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" media="screen and (max-width:479px)" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width:480px)" href="css/style2.css">
+</head>
+<body>
+    <div class="wrap_original">
+        <header>
+            <div class="page-header-sp pc-non">
+                <!-- hamburger(SP) -->
+                <div class="hamburger pc-non">
+                    <button type="button" class="btn-hamburger" aria-controls="gnav" aria-expanded="false">
+                        <span class="btn-hamburger-line"></span>
+                    </button>
+                    <div id="gnav" class="header-nav" aria-hidden="true">
+                        <nav class="global-nav">
+                            <ul class="global-nav-list">
+                                <li class="global-nav-item"><a class="global-nav-link" href="#about">エントランスLINKとは？</a></li>
+                                <li class="global-nav-item"><a class="global-nav-link" href="#plan">料金プラン</a></li>
+                                <li class="global-nav-item"><a class="global-nav-link" href="#step">制作の流れ</a></li>
+                                <li class="global-nav-item"><a class="global-nav-link" href="#faq">よくある質問</a></li>
+                                <li class="global-nav-item"><a class="global-nav-link" href="contact.html">お問い合わせ</a></li>
+                            </ul>
+                            <ul class="global-nav-list d-flex global-nav-img-link">
+                                <li class="global-nav-item"><a class="global-nav-link" href="https://www.instagram.com/">
+                                    <img src="images/insta_logo.png" alt="インスタロゴ" class="header-sns-logo" height="50">
+                                </a></li>
+                                <li class="global-nav-item"><a class="global-nav-link" href="index.html">
+                                    <img src="images/logo.png" alt="エントランスリンクのロゴ" height="50" class="hamburger-in-logo">
+                                </a></li>
+                            </ul> <!-- /.global-nav-list -->
+                        </nav> <!-- /.global-nav -->
+                    </div>
+                </div> 
+                <div class="header-logo pc-non">
+                    <a class="header-logo-link" href="index.html">
+                        <img class="header-logo-img" src="images/logo.png" alt="エントランスLinkのロゴ" height="50">
+                    </a>
+                </div><!-- /.header-logo -->
+            </div>
+            <div class="page-header-pc sp-non">
+                <!-- PC用のナビゲーション -->
+                <nav class="g-nav sp-non">
+                    <ul class="nav-list d-flex">
+                        <li><a href="index.html#about">エントランスLINKとは？</a></li>
+                        <li><a href="index.html#plan">料金プラン</a></li>
+                        <li><a href="index.html#step">制作の流れ</a></li>
+                        <li><a href="index.html#faq">よくある質問</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="top-logo d-flex sp-non">
+                <a href="index.html">
+                    <img src="images/logo.png" height="50" alt="エントランスリンクロゴ" class="sp-non">
+                </a>
+            </div>
+        </header>
+        <main id="main">
+            <div class="bg_pattern Paper_v2"></div><!-- /.bg_pattern .Paper_v2 -->
+            <div class="mv-layout">
+                <div class="main-copy">
+                    <h1 class="main-copy-title">デザインを見れば<br>あなたが伝わる</h1>
+                    <div class="main-copy-text col">
+                        <p>自由度の高いレイアウトですべてのリンクをひとつに<br>あなただけのオリジナルプロフィールリンク</p>
+                    </div><!-- main-copy-text -->
+                    <!-- PC用mvお問い合わせbtn -->
+                    <div class="sp-non">
+                        <a href="contact.html" class="contact-btn btn-color btn-radius">まずは無料相談！</a>
+                    </div><!-- sp-non -->
+                </div><!--main-copy-->
+                <div class="mv">
+                    <div class="border-changed mv-slide">
+                        <img class="mv-image active" src="images/woman_link.png">
+                        <img class="mv-image" src="images/magician_link.png">
+                        <img class="mv-image" src="images/girl_link.png">
+                        <img class="mv-image" src="images/man_link.png">
+                        <img class="mv-image" src="images/chef_link.png">
+                    </div><!-- border-changed -->
+                </div><!-- mv -->
+            </div>
+            <div id="about" class="about element">
+                <div class="about-item01 col wave">
+                    <canvas id="waveCanvas"></canvas>
+                    <div class="about-item01-text">
+                        <p>プロフィールリンクはあなたのビジネスの玄関口<br>ブランディングしたオーダーメイドのページは<br>あなたの印象とマッチしており見た人の記憶に残ります<br>必要な情報まで最短でアクセスできるよう<br>ビジネスに合った導線を確保することで<br>プロフィールリンクはあなたとお客様を繋げる架け橋になるでしょう</p>
+                    </div>
+                    <div class="about-item01-sample about-slider">
+                        <a class="sample-item slide-item" href="https://entrancel.com/a1/hitotsubo/">
+                            <img src="images/sample01.png" alt="作成サンプル1">
+                        </a>
+                        <a class="sample-item slide-item" href="https://entrancel.com/a1/matsumoto_hiroko/">
+                            <img src="images/sample02.png" alt="作成サンプル2">
+                        </a>
+                        <a class="sample-item slide-item" href="https://entrancel.com/a1/withcreation/">
+                            <img src="images/sample03.png" alt="作成サンプル3">
+                        </a>
+                        <a class="sample-item slide-item" href="https://entrancel.com/a1/rietdesign/">
+                            <img src="images/sample04.png" alt="作成サンプル4">
+                        </a>
+                        <a class="sample-item slide-item" href="https://entrancel.com/a1/kuruweb/">
+                            <img src="images/sample05.png" alt="作成サンプル5">
+                        </a>
+                    </div>
+                    <canvas id="waveCanvas2"></canvas>
+                </div><!-- /about-item01 -->
+                <div class="about-item02">
+                    <div class="container about02-cat element">
+                        <div class="title heading-primary">
+                            <h1>専属デザイナーが<br>あなたらしさを表現</h1>
+                        </div><!-- /.about-item02-title -->
+                        <div class="fade">
+                            <div class="scroll-up01">
+                                <p class="comment-scroll01">自由な<br>メインビジュアル</p>
+                            </div><!-- /.scroll-fade -->
+                            <div class="scroll-up02">
+                                <p class="comment-scroll02">経歴やプロフィール</p>
+                            </div><!-- /.scroll-fade -->
+                            <div class="scroll-up03">
+                                <p class="comment-scroll03">複数のSNSを<br>好きなだけ、好きな順番で<br>アクセスしやすい導線を設計</p>
+                            </div><!-- /.scroll-fade -->
+                        </div><!-- /.fade -->
+                        <div class="sp-img">
+                            <img src="images/about_sp.png" alt="スマホのイラスト">
+                        </div>
+                    </div>
+                </div><!-- /about-item02 -->
+            </div><!-- /about -->
+            <div id="plan" class="container element">
+                <div class="title heading-primary">
+                    <h1>用途にあわせた<br>３つの料金プラン</h1>
+                </div><!-- title heading-primary -->
+                <p class="plan-tax"><small>※価格は全て税込表示です。</small></p>
+                    <div class="slider">
+                        <div class="slide-item">
+                            <div class="line-blue">
+                                <div class="txt-box">
+                                    <h2 class="item-title item-title-pc"><img class="item-icon" src="images/crown-icon.png"><span>オーダーメイド</span></h2>
+                                    <p class="item-txt">担当者があなた専用のページデザインを一緒にお考えします。&emsp;ビジネスカラーを引き出せるおすすめプランです。</p>
+                                </div><!-- /.txt-box -->
+                                <div class="price-box">
+                                    <p class="price-title price-title-pc">PRICE</p>
+                                    <p class="price price-pc">&yen;50,000-</p>
+                                    <div class="price-list price-list-pc">
+                                        <ul>
+                                            <li class="price-list-item price-list-item-pc">
+                                                <p class="price-list-item-title price-list-item-title-pc">月額費用なし</p>
+                                                <div class="price-list-item-maru price-list-item-maru-pc"></div>
+                                            </li>
+                                            <li class="price-list-item price-list-item-pc">
+                                                <p class="price-list-item-title price-list-item-title-pc">サーバー不要</p>
+                                                <div class="price-list-item-maru price-list-item-maru-pc"></div>
+                                            </li>
+                                            <li class="price-list-item price-list-item-pc">
+                                                <p class="price-list-item-title price-list-item-title-pc">専属クリエイター</p>
+                                                <div class="price-list-item-maru price-list-item-maru-pc"></div>
+                                            </li>
+                                            <li class="price-list-item price-list-item-pc">
+                                                <p class="price-list-item-title price-list-item-title-pc">似合わせデザイン</p>
+                                                <div class="price-list-item-maru price-list-item-maru-pc"></div>
+                                            </li>
+                                            <li class="price-list-item price-list-item-pc">
+                                                <p class="price-list-item-title price-list-item-title-pc">QRコード</p>
+                                                <div class="price-list-item-maru price-list-item-maru-pc"></div>
+                                            </li>
+                                        </ul>
+                                    </div><!-- price-list -->
+                                </div><!-- /.price-box -->
+                            </div>
+                        </div><!-- /.slide-item -->
+                        <div class="slide-item">
+                            <div class="line-purple">
+                                    <div class="txt-box">
+                                        <h2 class="item-title"><img class="item-icon" src="images/star-icon.png"><span>セミオーダー</span></h2>
+                                        <p class="item-txt semi-txt">テンプレートをベースにメインビジュアルと色味をお選び頂けるプランです。<br><br></p>
+                                    </div><!-- /.txt-box -->
+                                    <div class="price-box semi-box">
+                                        <p class="price-title">PRICE</p>
+                                        <p class="price">&yen;20,000-</p>
+                                        <div class="price-list">
+                                            <ul>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">月額費用なし</p>
+                                                    <div class="price-list-item-maru"></div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">サーバー不要</p>
+                                                    <div class="price-list-item-maru"></div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">専属クリエイター</p>
+                                                    <div class="price-list-item-maru"></div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">似合わせデザイン</p>
+                                                    <div class="price-list-item-batu">
+                                                        <img src="images/batu.png" alt="×アイコン">
+                                                    </div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">QRコード</p>
+                                                    <div class="price-list-item-batu">
+                                                        <img src="images/batu.png" alt="×アイコン">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div><!-- price-list -->
+                                    </div><!-- /.price-box -->
+                            </div><!-- line-purple -->
+                        </div><!-- /.slide-item -->
+                        <div class="slide-item">
+                            <div class="line-green">
+                                    <div class="txt-box">
+                                        <h2 class="item-title"><img class="item-icon" src="images/star-icon.png"><span>テンプレート</span></h2>
+                                        <p class="item-txt">テンプレートをベースに色味だけお選び頂けるプランです。<br><br><br class="br-none-sp br-none-pc"></p>
+                                    </div><!-- /.txt-box -->
+                                    <div class="price-box">
+                                        <p class="price-title">PRICE</p>
+                                        <p class="price">&yen;9,800-</p>
+                                        <div class="price-list">
+                                            <ul>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">月額費用なし</p>
+                                                    <div class="price-list-item-maru"></div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">サーバー不要</p>
+                                                    <div class="price-list-item-maru"></div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">専属クリエイター</p>
+                                                    <div class="price-list-item-batu">
+                                                        <img src="images/batu.png" alt="×アイコン">
+                                                    </div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">似合わせデザイン</p>
+                                                    <div class="price-list-item-batu">
+                                                        <img src="images/batu.png" alt="×アイコン">
+                                                    </div>
+                                                </li>
+                                                <li class="price-list-item">
+                                                    <p class="price-list-item-title">QRコード</p>
+                                                    <div class="price-list-item-batu">
+                                                        <img src="images/batu.png" alt="×アイコン">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div><!-- price-list -->
+                                    </div><!-- /.price-box -->
+                            </div><!-- line-purple -->
+                        </div><!-- /.slide-item -->
+                    </div><!-- /.slider -->
+            </div><!-- /plan -->
+            <div id="step">
+                <div class="container element">
+                    <h1 class="title heading-primary">制作の流れ</h1>
+                    <!--STEPの矢印全体-->
+                    <div class="step-area">
+                        <div class="head-area">
+                            <div class="step-arrow01">
+                                <h1 class="step-num01">STEP1</h1>
+                            </div><!-- step-arrow -->
+                            <div class="step-arrow02">
+                                <h1 class="step-num02">STEP2</h1>
+                            </div><!-- step-arrow -->
+                            <div class="step-arrow03">
+                                <h1 class="step-num03">STEP3</h1>
+                            </div><!-- step-arrow -->
+                            <div class="triangle"></div>
+                        </div><!-- head-area -->
+                        <div class="text-area">
+                            <div class="text-box1">
+                                <h2 class="step-txt-title">お問い合わせ</h2>
+                                <p>お問い合わせフォーム、又はエントランスLINK公式LINEをお友達追加して頂き、ご不明点やご要望をお聞かせ下さい。&emsp;担当者より折り返しご連絡致します。</p>
+                                <!-----Lineのボタン----->
+                                <div class="Contact_button">
+                                    <a href="contact.html">
+                                        <span class="btn btn--color btn--icon">お問い合わせ</span>
+                                    </a>
+                                </div>
+                            </div><!-- /text-box1 -->
+                            <div class="text-box2">
+                                <h2 class="step-txt-title">ミーティング</h2>
+                                <p>ミーティングで担当者があなたの希望を伺います。イメージを膨らませ、ご自身のブランディングに合った文章とデザインを考えましょう。
+                                </p>
+                            </div><!-- /text-box2 -->
+                            <div class="text-box3">
+                                <h2 class="step-txt-title">完成</h2>
+                                <p>専属デザイナーが作成した完成物を確認して頂きます。URLリンクと、「納品後の注意と利用マニュアル」をお渡しします。</p>
+                            </div><!-- /text-box3 -->
+                        </div><!-- text-area -->
+                    </div><!-- /.step-area -->
+                </div>
+            </div><!-- /step -->
+            <div id="faq">
+                <div class="faqgroup container element">
+                    <div class="title heading-primary">
+                        <h1>よくある質問</h1>
+                    </div><!-- title heading-primary -->
+                        <ul class="accordion-area">
+                        <li>
+                            <section>
+                                <div class="faq-title">ホームページとの違いは？</div>
+                                <div class="box">
+                                    <p>ホームページはたしかにブランディングされたものでしょう。
+                                    <br class="none320">
+                                    しかし、「流入経路」を&quot;Googleなどからの訪問と仮定して作成されたホームページ&quot;の場合、SNSからのお客様にとってはふさわしくない導線となってしまう場合も多いのです。
+                                    <br>
+                                    即知りたいことに直接アクセスできるように、導線を設計できるのがエントランスLINKの大きな特徴です。 </p>
+                                </div>
+                            </section>
+                        </li>
+                            <li>
+                                <section>
+                                    <div class="faq-title">無料類似サービスでよくない？</div>
+                                    <div class="box">
+                                        <p>一般的なプロフィールリンクのサービスと大きく違う部分は、「それぞれのビジネスに合った導線を確保」できること。
+                                        <br>
+                                        プロフィールリンクのサービスに合わせて作るのではなく、あなたのビジネスに合わせたリンクを作るのがエントランスLINKです。
+                                        </p>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <section>
+                                    <div class="faq-title">プランの違いは？</div>
+                                    <div class="box">
+                                        <p>似合わせデザインを専属クリエイターが提案するのは、オーダーメイドプランだけです。
+                                        <br>
+                                        テンプレートプランは色味、セミオーダープランは色味とメインビジュアルを変えられますが、ビジネスカラーを最大限引き出したい方にはオーダーメイドプランがおすすめです。
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <section>
+                                    <div class="faq-title">アフターサービスは？</div>
+                                    <div class="box">
+                                        <p>作成後、再編集希望箇所があれば追加料金5,000円で編集致します。
+                                    </div>
+                                </section>
+                            </li>
+                        </ul>
+                </div>
+            </div><!-- /faq -->
+        </main>
+        <footer>
+            <div class="d-flex footer-contents">
+                <ul class="link">
+                    <!--運営会社-->
+                    <li class="company"><a href="https://kuru.design/" target="_blank">運営会社</a></li>
+                    <!--プライバシーポリシー-->
+                    <li class="policy"><a href="https://kuru.design/privacypolicy/" target="_blank">プライバシーポリシー</a></li>
+                    <!--Instagram-->
+                    <li class="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="images/insta_logo.png" alt="インスタグラムのロゴ"></a></li>
+                </ul>
+                <ul class="site_top">
+                    <!--サイトトップへ戻る-->
+                    <li><a href="#"><img src="images/logo.png" height="40">
+                    </a></li>
+                </ul>
+            </div>
+            <!--コピーライト-->
+            <p class="copyright">&copy; entrance LINK</p>
+        </footer><!-- /footer -->
+    </div><!-- wrap_original -->
+    <div class="fixed-btn-sp pc-non">
+        <a href="contact.html" class="fixed-btn01">まずは無料相談！</a>
+    </div>
+    <div class="fixed-btn-pc sp-non">
+        <a href="contact.html" class="fixed-btn01">まずは無料相談！</a>
+    </div>
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+</html>
