@@ -344,6 +344,8 @@ a {
 /*instagram*/
 .instagram {
     padding-top: 20px;
+    position: relative;
+    z-index: 88;
 }
 .instagram img {
     width: 36px;
@@ -361,6 +363,7 @@ a {
     text-align: center;
     padding-bottom: 15px;
     position: relative;
+    z-index: 80;
     bottom: 20px;
     font-size: 12px;
 }
